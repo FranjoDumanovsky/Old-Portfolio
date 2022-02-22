@@ -1,0 +1,198 @@
+.my-services {
+
+    background-image:  radial-gradient(circle, rgba(5, 63, 102,0.5), rgba(0,0,0,1)), url(../img/a.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-align: left;
+    color: var(--clr-light);
+    width: min-content max-content;
+    position: relative;
+
+
+   
+
+    .services {
+        margin-bottom: 3em;
+    }
+    
+
+    .section__title--services {
+        color: var(--clr-white);
+        position: relative;
+        letter-spacing: 2px;
+        font-weight: 900;
+        margin-left: 5rem;
+      
+        @media (max-width:800px) {
+          text-align: center;
+          margin-left: 0;
+
+      }
+       
+         
+        &::after {
+            content: "";
+            display: block;
+            width: 3em;
+            height: 1px;
+            margin:0.5em 0 1em 0;
+            background: var(--clr-light);
+            opacity: 0.5;
+ 
+            @media (max-width:800px) {
+              text-align: center;
+              margin:2rem auto;
+          }
+        }
+    }
+
+
+    
+    .service {
+        width: 38vw;
+      
+        margin: 0 auto;
+        padding: 2.3rem 2rem;
+        padding-bottom: 1rem;
+        border-radius: 20px;
+        background-color: rgba(80, 80, 80, 0.289);
+        border: rgba(70, 70, 70, 0.2) 1px solid;
+        box-shadow: var(--bs);
+
+
+        @media (max-width:800px) {
+          width: 90vw;
+          margin-bottom: 2rem;
+    
+      }
+        h3 {
+            font-size: 1.6rem;
+           
+            color: rgb(255, 255, 255);
+        }
+
+        p {
+            font-size: 1em;
+            margin-top: 1.5rem;
+            font-style: italic;
+
+            color: rgb(211, 211, 211);
+        }
+    }
+
+    @media (min-width:800px) {
+        .services {
+                display: flex;
+                max-width: 1000px;
+                margin-left: auto;
+                margin-right: auto;
+                
+            }   
+
+            .service + .service {
+                margin-left: 2em;
+            }
+    }
+
+
+}
+
+
+// button styles
+
+.special-button {
+  
+    --offset: 10px;
+    --border-size: 1px;
+   
+    display: block;
+    position: relative;
+    padding: 1.6em 2.6em;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--clr-white);
+    border-color: rgba(255, 255, 255, 0.137);
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0;
+    text-shadow: 1px 3px 0px rgba(0,0,0,0.2);
+    transition: all .8s ease;
+    font-size: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+
+      transition: 1.2s ; 
+
+      box-shadow: inset 0 0 0 var(--border-size) currentColor;
+    }
+    
+    &__horizontal,
+    &__vertical {
+      position: absolute;
+      top: var(--horizontal-offset, 0);
+      right: var(--vertical-offset, 0);
+      bottom: var(--horizontal-offset, 0);
+      left: var(--vertical-offset, 0);
+      transition: all 1s ease;
+      will-change: transform;
+      transform: scaleX(0);
+
+      opacity: 0;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        border: inherit;
+      }
+    }
+    
+    &__horizontal {
+      --vertical-offset: calc(var(--offset) * -1);
+      border-top: var(--border-size) solid currentColor;
+      border-bottom: var(--border-size) solid currentColor;
+      
+      &::before {
+        top: calc(var(--vertical-offset) - var(--border-size));
+        bottom: calc(var(--vertical-offset) - var(--border-size));
+        left: calc(var(--vertical-offset) * -1);
+        right: calc(var(--vertical-offset) * -1);
+      }
+    }
+    
+    &:hover &__horizontal {
+        transform: scaleX(1);
+        opacity: 0.8;
+    }
+    
+    &__vertical {
+      --horizontal-offset: calc(var(--offset) * -1);
+      border-left: var(--border-size) solid currentColor;
+      border-right: var(--border-size) solid currentColor;
+      
+      &::before {
+        top: calc(var(--horizontal-offset) * -1);
+        bottom: calc(var(--horizontal-offset) * -1);
+        left: calc(var(--horizontal-offset) - var(--border-size));
+        right: calc(var(--horizontal-offset) - var(--border-size));
+      }
+    }
+    
+    &:hover &__vertical {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+    
+
+
+  }

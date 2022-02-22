@@ -1,0 +1,363 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Dev Portfolio</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <div class="logo">
+          <h2 class="str-logo">ANCIS <strong>DEV</strong></h2>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav__desktop--list">
+            <li class="nav__desktop--item">
+              <a href="#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__desktop--item">
+              <a href="#services" class="nav__link">My Work</a>
+            </li>
+            <li class="nav__desktop--item">
+              <a href="#about" class="nav__link">Clients</a>
+            </li>
+            <li class="nav__desktop--item">
+              <a href="#work" class="button button__primary"> Let's Talk! </a>
+            </li>
+          </ul>
+
+          <ul class="nav__mobile--list">
+            <li class="nav__Desktop--item">
+              <a href="#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__desktop--item">
+              <a href="#services" class="nav__link">My Work</a>
+            </li>
+            <li class="nav__desktop--item">
+              <a href="#about" class="nav__link">Clients</a>
+            </li>
+            <li class="nav__desktop--item">
+              <a href="#work" class="nav__link">My Work </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="menu-btn" aria-label="toggle navigation">
+          <div class="menu-btn__burger"></div>
+        </div>
+      </header>
+    </div>
+
+    <div class="vertical-links">
+      <a href="">
+        <i class="fab fa-github" id="git-Icon"></i>
+      </a>
+      <a href="">
+        <i class="fab fa-linkedin" id="ln-Icon"></i>
+      </a>
+      <a href="" class="mail-options">
+        <i class="fa fa-envelope" id="mail-Icon"></i>
+        <div class="mail-option">
+          <p>Copy e-mail</p>
+          <p>Open e-mail in browser</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- introduction -->
+    <section class="intro" id="home">
+      <h1 class="section__title section__title--intro">
+        Fully responsive,<br />custom designed <strong>WEBSITES</strong>
+      </h1>
+
+      <p class="section__subtitle section__subtitle--intro">/Front-end.dev</p>
+      <img src="img/dev.jpeg" alt="" class="intro__img" />
+    </section>
+
+    <!-- my services -->
+    <section class="my-services" id="services">
+      <h2 class="section__title section__title--services">
+        Bring your projects to life
+      </h2>
+      <div class="services">
+        <div class="service">
+          <h3>Design & Development</h3>
+          <p>
+            From UX/UI website design, all the way to developing beautifull
+            landing pages, and fully responsive websites. My goal is to impress
+            you & your customers with websites that engage and inspire.
+          </p>
+        </div>
+        <div class="service">
+          <h3>E-Commerce & Seo optimization</h3>
+          <p>
+            Do you need an ecommerce site that will drive sales? Let me tell you
+            a little bit more about your ecommerce site built with unique and
+            attractive design that will grab the attention of your visitors.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Wordpress Development</h3>
+          <p>
+            Wordpress website design and development, unique solutions and
+            custom code for customised development. You receive complete control
+            over your site with greate advantages like plugins, themes in user
+            friendly environment.
+          </p>
+        </div>
+      </div>
+
+      <button href="#work" class="special-button">
+        See my Work
+        <div class="special-button__horizontal"></div>
+        <div class="special-button__vertical"></div>
+      </button>
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">Nice to meet you!</h2>
+      <p class="section__subtitle section__subtitle--about">
+        Front-end developer based in Zagreb
+      </p>
+
+      <div class="about-me__body">
+        <p>
+          My name is Franjo Dumanovsky and lately I spend most of my days
+          writing semicolons; When I'm not infront of the screen, I usualy play
+          guitar, or walk dogs on the mountain peeks.
+        </p>
+        <p>
+          My experience with web development involves CSS, SaaS, HTML5,
+          Javascript, Jquery and Wordpress. I also use web design tools to
+          design the website with Adobe XD, and fluff up the images with
+          Photoshop.
+        </p>
+      </div>
+      <img src="img/dev.jpeg" alt="" class="about-me__img" />
+    </section>
+
+  
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-heading" data-outline="Projects">Projects</h2>
+      </div>
+      <div class="all-items">
+        <div class="item">
+          <div class="left">
+            <div class="img">
+              <img src="img/aaa.jpeg" alt="project" />
+            </div>
+          </div>
+          <div class="right">
+            <h3 class="project-title">Reve Dostava</h3>
+            <h4 class="project-sub-title">Lorem ipsum dolor sit.</h4>
+            <p class="project-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Sapiente, saepe animi? Quia harum repellat quis nesciunt voluptas
+              pariatur at aperiam!
+            </p>
+            <div class="project-buttons">
+              <a href="" class="button button__primary">Know More</a>
+              <a href="" class="button button__outline external-link">
+                  <span>Preview</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="left">
+            <div class="img">
+              <img src="img/aaa.jpeg" alt="project" />
+            </div>
+          </div>
+          <div class="right">
+            <h3 class="project-title">Lorem ipsum dolor sit.</h3>
+            <h4 class="project-sub-title">Lorem ipsum dolor sit.</h4>
+            <p class="project-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Sapiente, saepe animi? Quia harum repellat quis nesciunt voluptas
+              pariatur at aperiam!
+            </p>
+            <div class="project-buttons">
+              <a href="" class="button button__primary">Know More</a>
+              <a href="" class="button button__outline external-link">
+                  <span>Preview</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="left">
+            <div class="img">
+              <img src="img/aaa.jpeg" alt="project" />
+            </div>
+          </div>
+          <div class="right">
+            <h3 class="project-title">Lorem ipsum dolor sit.</h3>
+            <h4 class="project-sub-title">Lorem ipsum dolor sit.</h4>
+            <p class="project-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Sapiente, saepe animi? Quia harum repellat quis nesciunt voluptas
+              pariatur at aperiam!
+            </p>
+            <div class="project-buttons">
+              <a href="" class="button button__primary">Know More</a>
+              <a href="" class="button button__outline external-link">
+                  <span>Preview</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="" class="social-list__link">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="" class="social-list__link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="" class="social-list__link">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <div class="bubbles">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="colorDetector.js"></script>
+    <script src="color.js"></script>
+  </body>
+</html>

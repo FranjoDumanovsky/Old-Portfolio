@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+
+    --clr-bg: rgb(224, 224, 224);
+    --clr-light: rgb(228, 228, 228);
+    --clr-dark: #303030;
+    --clr-gray: rgb(53, 53, 53);
+    --clr-accent: #0070d2;
+
+    --fs-h1: 3.3rem;
+    --fs-h2: 2.4rem;
+    --fs-h3: 1.55rem;
+    --fs-body: 1rem;
+
+    --bs: .3em 0.3em 0.8em rgb(0,0,0,.3),
+          0.13em 0.13em 0.3em rgba(0,0,0,.2);
+
+          
+
+    @media  (min-width:1150px) {
+        --fs-h1: clamp(1rem, 7vw + 1rem, 6rem);
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+

@@ -1,0 +1,360 @@
+body, html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin:0;
+    overflow-x: hidden;
+
+    a {
+      text-decoration: none;
+    }
+
+}
+
+body {
+    color: var(--clr-dark);
+    margin:0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    background: var(--clr-bg);
+}
+
+
+section {
+    padding: 6em 2.5em;
+
+    @media (max-width: 1150px){
+        padding: 2em 2rem;
+    }
+
+    @media (max-width: 800px){
+        padding: 5em 1rem;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    padding:0;
+}
+
+strong {
+    font-weight: var(--fw-bold);
+    display: block;
+}
+
+.str-logo {
+    strong {
+        color: rgb(255, 255, 255);
+    }
+}
+
+
+
+
+
+/* typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin:0;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+h2 {
+    font-size: var(--fs-h2);
+}
+h3 {
+    font-size: var(--fs-h3);
+}
+
+.section {
+    
+    &__title {
+        font-weight: 200;  
+        margin:0;
+        margin-bottom: 0.2em;
+
+
+        &--intro {
+            font-weight: var(--fw-reg);
+            line-height: 1.05;
+
+
+
+        }
+    }
+
+    &__subtitle {
+        margin: 0;
+        font-size: var(--fs-h3);
+
+
+        &--intro, &--about {
+            background:var(--clr-accent);
+            padding: .25em 1em;
+            font-family: var(--ff-secondary);
+            margin-bottom: 1em;
+            color: var(--clr-light);
+        }
+    }
+
+
+
+}
+
+
+
+
+
+
+
+// bubbles
+
+
+$bubble-count: 50;
+$sway-type: "sway-left-to-right", "sway-right-to-left";
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+@function sample($list) {
+  @return nth($list, random(length($list)));
+}
+
+.bubbles {
+  position: fixed;
+  inset: 0 0 0 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -20;
+}
+
+.bubble {
+  position: absolute;
+  left: var(--bubble-left-offset);
+  bottom: -75%;
+  display: block;
+  width: var(--bubble-radius);
+  height: var(--bubble-radius);
+  border-radius: 50%;
+  animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 148, 216, 0.156);
+    border-radius: inherit;
+    animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
+  }
+
+  @for $i from 0 through $bubble-count {
+    &:nth-child(#{$i}) {
+      --bubble-left-offset: #{random_range(0vw, 100vw)};
+      --bubble-radius: #{random_range(1vw, 10vw)};
+      --bubble-float-duration: #{random_range(16s, 30s)};
+      --bubble-sway-duration: #{random_range(8s, 12s)};
+      --bubble-float-delay: #{random_range(0s, 0s)};
+      --bubble-sway-delay: #{random_range(0s, 0s)};
+      --bubble-sway-type: #{sample($sway-type)};
+    }
+  }
+}
+
+@keyframes float-up {
+  to {
+    transform: translateY(-250vh);
+  }
+}
+
+@keyframes sway-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sway-right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+.vertical-links {
+    position: fixed;
+    top: 42%;
+    left:-2rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 90000000;
+   
+
+
+
+    @media (max-width: 840px){
+        display: none;
+    }
+
+
+     
+    a {
+        width: 130px;
+        text-align: center;
+        padding: 15px 0;
+        transition: transform 1s, background-color 0.5s;
+        background-color: none;
+        mix-blend-mode: overlay;
+
+        
+
+        &:hover {
+            background-color: var(--clr-dark);
+            transform: background-color 0.5s;
+            width: 140px;
+            transition: width 0.5s ease-in-out;
+            i {
+                color: var(--clr-light);
+            
+                
+
+            }
+        }
+    }
+    .light {
+        color: var(--clr-light);
+       
+        transition: color 1s;
+    }
+    .dark {
+        color: var(--clr-dark);
+        transition: color 1s;
+    }
+    .mail-options {
+        position: relative;
+        .mail-option {
+            display: none;
+        }
+    }
+
+    .mail-options:hover {
+    
+        .mail-option {
+            position: absolute;
+            
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            top: 3.9rem;
+            width: 100%;
+            color: rgb(214, 214, 214);
+            animation-name: slideDown;
+            animation-duration:0.3s ;
+            animation-timing-function: ease-in-out;
+            z-index: -2;
+
+            p {
+                width: 100%;
+                border: solid rgba(255, 255, 255, 0.178) 1px;
+                margin: 0px 0;
+                padding: 6px 0 6px 40px;
+                background: rgba(70, 70, 70, 0.736);
+                font-size: 0.8rem; 
+                 
+
+                @keyframes slideDown {
+                    0%   { top: 0;
+                           
+                            opacity: 0;
+                         }
+                         70% {
+                             top:0;
+                             opacity: 0.2;
+                         }
+                    100%  { top: 3.8rem;
+                    opacity: 1; 
+               }
+                  }
+                
+                &:hover {
+                    background: var(--clr-dark);
+                    opacity: 0.8;
+                }
+            }
+
+            
+            
+        }
+    }
+    
+    i {
+        color: var(--clr-dark);
+        font-size: 2rem;
+        opacity: 0.6;
+    }
+
+}
+
+
+
+
+
+
+.button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.3em 1.5em;
+    border-radius: 50px;
+    border: 2px solid var(--clr-accent);
+
+
+  &__primary {
+    background-color: var(--clr-accent);
+    color: white!important;
+
+  }
+
+
+  &__outline {
+    color: var(--clr-accent);
+    background-color: transparent;
+    border: 2px solid var(--clr-accent);
+
+
+
+    &.external-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 0.725rem;
+
+
+      svg {
+        width: 25px;
+        color: var(--clr-accent);
+      }
+    }
+  }
+}

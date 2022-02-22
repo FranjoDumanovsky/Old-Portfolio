@@ -1,0 +1,210 @@
+.header {
+    width: 100%;
+    padding: 1em 4em;
+    position: relative;
+
+    @media (max-width: 800px){
+        padding: 2em 2em;
+    }
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: padding 1s ease-in-out;
+    z-index: 100000;
+  
+
+
+
+.logo {
+    text-align: left;
+    
+        h2{
+            font-weight: 800;
+            color: var(--clr-accent);
+            font-size: 2.6rem;
+        line-height: 0.95;
+            transition: font-size 1s ease-in-out;
+            @media (max-width: 800px){
+                font-size: var(--fs-h2);
+            }
+    
+        }
+    
+    }
+}
+
+
+
+
+
+.nav {
+
+    &__desktop--list {
+        display: flex;
+        gap: var(--gap, 3rem); 
+        padding:0;
+
+        align-items: center;
+        @media (max-width: 49em) {
+            display: none;
+
+     }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            color: var(--clr-dark);
+            font-size: 1.3rem;
+            transition: font-size 1s ease-in-out;
+
+        }
+    }
+
+
+    &__mobile--list { 
+        display: none;
+        gap: var(--gap, 2.2rem); 
+        position:fixed;
+        inset: 0 0 0 0;
+        background: rgb(29, 29, 29);
+        z-index: 2000;
+        flex-direction: column;
+        margin:0;
+        padding:10rem 0rem;
+        text-align: center;
+
+        overflow: hidden;
+            
+            a {
+                color: var(--clr-light);
+                text-transform: uppercase;
+                font-weight: 500;
+                margin-right: auto;
+                margin-left: auto;
+                font-size: var(--fs-h2);
+            }
+        }
+    li {
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none; 
+    }
+}
+
+
+
+
+
+
+// hamburger menu
+
+.menu-btn {
+  
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+    @media (max-width: 49em) {
+           display: flex;
+           position: absolute;
+           top: 2em;
+           right: 2em;
+           z-index: 100000000;
+    }
+    
+
+    &__burger {
+        
+        width: 40px;
+        height: 5px;
+        background: var(--clr-dark);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(41, 41, 41, 0.2);
+        transition: all .5s ease-in-out;
+        z-index: 2001;
+        display: block;
+
+
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 5px;
+            background: var(--clr-dark);
+            border-radius: 2.5px;
+            box-shadow: 0 2px 5px rgba(39, 39, 39, 0.2);
+            transition: all .5s ease-in-out;
+        }
+
+        &::before {
+            transform: translateY(-10px);
+            
+
+        }
+        &::after {
+            transform:  translateY(10px);
+        }
+    }
+
+}
+
+// open / close the nav menu
+
+.menu-btn.open {
+    .menu-btn__burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+
+        &::before {
+            transform: rotate(45deg) translate(35px, -35px);
+            background: var(--clr-light);
+        }
+        &::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            background: var(--clr-light);
+        }
+    }
+}
+
+
+
+
+.main-cta {
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--clr-accent);
+    border-radius: 1.25rem;
+    border: 1px solid var(--clr-accent);
+
+    font-weight: 400;
+    text-align: center;
+    max-width: 200px;
+    color:white!important;
+    padding:2px 30px;
+
+
+    &:hover {
+        background-color: #005fb2;  
+        border-color: #005fb2;
+    } 
+    p {
+        margin:0;
+        
+    }
+}
