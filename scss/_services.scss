@@ -1,6 +1,6 @@
 .my-services {
 
-    background-image:  radial-gradient(circle, rgba(5, 63, 102,0.5), rgba(0,0,0,1)), url(../img/a.jpeg);
+    background-image:  radial-gradient(circle, rgba(16, 45, 75, 0.5), rgb(0, 0, 0)), url(../img/a.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -51,14 +51,14 @@
 
     
     .service {
-        width: 38vw;
-      
+        width: 32vw;
+      text-align: center;
         margin: 0 auto;
         padding: 2.3rem 2rem;
         padding-bottom: 1rem;
         border-radius: 20px;
-        background-color: rgba(80, 80, 80, 0.289);
-        border: rgba(70, 70, 70, 0.2) 1px solid;
+        background-color: rgba(58, 57, 57, 0.2);
+        border: rgba(70, 70, 70, 0.3) 1px solid;
         box-shadow: var(--bs);
 
 
@@ -106,14 +106,16 @@
   
     --offset: 10px;
     --border-size: 1px;
-   
+
+    max-width: 13rem;
+    text-align: center;
+    color: var(--clr-white);
     display: block;
     position: relative;
     padding: 1.6em 2.6em;
     appearance: none;
     border: 0;
     background: transparent;
-    color: var(--clr-white);
     border-color: rgba(255, 255, 255, 0.137);
     text-transform: uppercase;
     letter-spacing: .25em;
@@ -126,7 +128,9 @@
     font-size: 0.8rem;
     margin-left: auto;
     margin-right: auto;
+
     margin-top: 4rem;
+  
 
 
     &:hover {

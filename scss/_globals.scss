@@ -203,120 +203,126 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 
 
 .vertical-links {
-    position: fixed;
-    top: 42%;
-    left:-2rem;
-    display: flex;
-    flex-direction: column;
-    z-index: 90000000;
+  position: fixed;
+  top: 35%;
+  left:-2rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 90000000;
+ 
+
+
+
+  @media (max-width: 800px){
+      display: none;
+  }
+
+
    
+   .icons {
+      width: 130px;
+      text-align: center;
+      padding: 15px 0;
+      transition: transform 1s, background-color 0.5s;
+      background-color: none;
 
 
+      
 
-    @media (max-width: 840px){
-        display: none;
-    }
+      &:hover {
+          background-color: var(--clr-accent);
+          transform: background-color 0.5s;
+          width: 140px;
+          transition: width 0.5s ease-in-out;
+          i {
+              color: var(--clr-light);
 
+              
 
+          }
+      }
+  }
+  .light {
+      color: var(--clr-light);
      
-    a {
-        width: 130px;
-        text-align: center;
-        padding: 15px 0;
-        transition: transform 1s, background-color 0.5s;
-        background-color: none;
-        mix-blend-mode: overlay;
+      transition: color 1s;
+  }
+  .dark {
+      color: var(--clr-dark);
+      transition: color 1s;
+  }
 
-        
 
-        &:hover {
-            background-color: var(--clr-dark);
-            transform: background-color 0.5s;
-            width: 140px;
-            transition: width 0.5s ease-in-out;
-            i {
-                color: var(--clr-light);
-            
-                
+.mail-options {
+  position: relative;
+}
+      .mail-option {
+          display: none;
 
-            }
-        }
-    }
-    .light {
-        color: var(--clr-light);
-       
-        transition: color 1s;
-    }
-    .dark {
-        color: var(--clr-dark);
-        transition: color 1s;
-    }
-    .mail-options {
-        position: relative;
-        .mail-option {
-            display: none;
-        }
-    }
+          a {
+            color: var(--clr-white);
+          }
 
-    .mail-options:hover {
-    
-        .mail-option {
-            position: absolute;
-            
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            top: 3.9rem;
-            width: 100%;
-            color: rgb(214, 214, 214);
-            animation-name: slideDown;
-            animation-duration:0.3s ;
-            animation-timing-function: ease-in-out;
-            z-index: -2;
+      }
+  
 
-            p {
-                width: 100%;
-                border: solid rgba(255, 255, 255, 0.178) 1px;
-                margin: 0px 0;
-                padding: 6px 0 6px 40px;
-                background: rgba(70, 70, 70, 0.736);
-                font-size: 0.8rem; 
-                 
+  .mail-options:hover {
+  
+      .mail-option {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          top: 3.9rem;
+          width: 100%;
+          color: rgb(214, 214, 214);
+          animation-name: slideDown;
+          animation-duration:0.3s ;
+          animation-timing-function: ease-in-out;
+          z-index: -2;
 
-                @keyframes slideDown {
-                    0%   { top: 0;
-                           
-                            opacity: 0;
-                         }
-                         70% {
-                             top:0;
-                             opacity: 0.2;
-                         }
-                    100%  { top: 3.8rem;
-                    opacity: 1; 
-               }
-                  }
-                
-                &:hover {
-                    background: var(--clr-dark);
-                    opacity: 0.8;
+           a {
+              width: 100%;
+              border: solid rgba(0, 0, 0, 0.089) 1px;
+              margin: 0px 0;
+              padding: 6px 0 6px 40px;
+              background: var(--clr-accent);
+              opacity: 0.66;
+              font-size: 0.8rem; 
+               
+
+              @keyframes slideDown {
+                  0%   { top: 0;
+                         
+                          opacity: 0;
+                       }
+                       70% {
+                           top:3.8rem;
+                           opacity: 0.2;
+                       }
+                  100%  { 
+                  opacity: 1; 
+             }
                 }
-            }
+              
+              &:hover {
+                  background: var(--clr-accent);
+                  opacity: 0.8;
+              }
+          }
 
-            
-            
-        }
-    }
-    
-    i {
-        color: var(--clr-dark);
-        font-size: 2rem;
-        opacity: 0.6;
-    }
+          
+          
+      }
+  }
+  
+  i {
+      color: var(--clr-dark);
+      font-size: 2rem;
+      opacity: 0.6;
+  }
 
 }
-
-
 
 
 
@@ -327,11 +333,19 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
     padding: 0.3em 1.5em;
     border-radius: 50px;
     border: 2px solid var(--clr-accent);
+    transition: all 0.3s ease-in-out;
 
 
   &__primary {
     background-color: var(--clr-accent);
     color: white!important;
+
+    &:hover {
+      background-color: #173F5F;
+      border: 2px solid #173F5F;
+      transition: all 0.3s ease-in-out;
+
+    }
 
   }
 
@@ -343,18 +357,71 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 
 
 
+
+
     &.external-link {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       gap: 0.725rem;
+      transition: all 0.3s ease-in-out;
 
 
+      &:hover {
+        box-shadow: inset 9.5em 0 0 0 var(--clr-accent);
+
+        color: white;
+        transition: all 0.3s ease-in-out;
+  }  
       svg {
         width: 25px;
         color: var(--clr-accent);
       }
+
+      &:hover {
+        svg {
+          color: white;
+          transition: color 0.3s ease-in-out;
+    
+        }
+      }
     }
   }
+}
+
+
+.coppied-email-message {
+position: fixed;
+z-index: 10;
+top: 88%;
+left: 50%;
+background-color: var(--clr-bg);
+padding: 4px 12px;
+transform: translate(-50%, -50%);
+font-size: 12px;
+opacity: 0;
+visibility: hidden;
+&.animated {
+animation: appear 3s;
+
+}
+}
+
+
+
+
+@keyframes appear {
+  0%   { visibility: visible;
+         
+          opacity: 0;
+       }
+       20% {
+
+           opacity: 1;
+       }
+  100%  { 
+  opacity: 0; 
+  visibility: hidden;
+}
 }

@@ -16,11 +16,11 @@
     --clr-light: rgb(228, 228, 228);
     --clr-dark: #303030;
     --clr-gray: rgb(53, 53, 53);
-    --clr-accent: #0070d2;
+    --clr-accent: #20639B;
 
-    --fs-h1: 3.3rem;
-    --fs-h2: 2.4rem;
-    --fs-h3: 1.55rem;
+    --fs-h1: 3rem;
+    --fs-h2: 2.8rem;
+    --fs-h3: 1.4rem;
     --fs-body: 1rem;
 
     --bs: .3em 0.3em 0.8em rgb(0,0,0,.3),
@@ -29,9 +29,9 @@
           
 
     @media  (min-width:1150px) {
-        --fs-h1: clamp(1rem, 7vw + 1rem, 6rem);
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
+        --fs-h1: clamp(1rem, 7vw + 1rem, 5.6rem);
+        --fs-h2: 3.5rem;
+        --fs-h3: 1.8rem;
         --fs-body: 1.125rem;
     }
 }

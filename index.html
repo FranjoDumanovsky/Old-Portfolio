@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Dev Portfolio</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
 
     <link
       rel="stylesheet"
@@ -30,7 +31,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="header">
+    <div class="header" id="header">
       <header>
         <div class="logo">
           <h2 class="str-logo">ANCIS <strong>DEV</strong></h2>
@@ -39,33 +40,42 @@
         <nav class="nav">
           <ul class="nav__desktop--list">
             <li class="nav__desktop--item">
-              <a href="#home" class="nav__link">Home</a>
+              <a href="#services" class="nav__link"><span data-content="Skills" aria-hidden="true"></span>Skills</a>
             </li>
             <li class="nav__desktop--item">
-              <a href="#services" class="nav__link">My Work</a>
+              <a href="#about" class="nav__link"><span data-content="About me" aria-hidden="true"></span>About me</a>
             </li>
             <li class="nav__desktop--item">
-              <a href="#about" class="nav__link">Clients</a>
-            </li>
-            <li class="nav__desktop--item">
-              <a href="#work" class="button button__primary"> Let's Talk! </a>
+              <a href="#projects" class="button button__primary"> My Work </a>
             </li>
           </ul>
 
           <ul class="nav__mobile--list">
-            <li class="nav__Desktop--item">
-              <a href="#home" class="nav__link">Home</a>
+            <li class="nav__desktop--item">
+              <a href="#projects" class="nav__link">My Work</a>
             </li>
             <li class="nav__desktop--item">
-              <a href="#services" class="nav__link">My Work</a>
+              <a href="#services" class="nav__link">Skills</a>
             </li>
             <li class="nav__desktop--item">
-              <a href="#about" class="nav__link">Clients</a>
+              <a href="#about" class="nav__link">About me</a>
             </li>
             <li class="nav__desktop--item">
-              <a href="#work" class="nav__link">My Work </a>
+              <a href="mailto:franjodumanovsky@gmail.com" class="nav__link">Let's talk!</a>
             </li>
+
+            <div class="mobile-links">
+              <a class="icons" href="https://github.com/Quelorel" target="blank">
+                <i class="fab fa-github" id="git-Icon"></i>
+              </a>
+              <a class="icons" href="https://www.linkedin.com/in/franjo-dumanovsky-5b23b51a4/" target="blank">
+                <i class="fab fa-linkedin" id="ln-Icon"></i>
+              </a>
+            </div>
+
           </ul>
+
+      
         </nav>
 
         <div class="menu-btn" aria-label="toggle navigation">
@@ -75,25 +85,27 @@
     </div>
 
     <div class="vertical-links">
-      <a href="">
+      <a class="icons" href="https://github.com/Quelorel" target="blank">
         <i class="fab fa-github" id="git-Icon"></i>
       </a>
-      <a href="">
+      <a class="icons" href="https://www.linkedin.com/in/franjo-dumanovsky-5b23b51a4/" target="blank">
         <i class="fab fa-linkedin" id="ln-Icon"></i>
       </a>
-      <a href="" class="mail-options">
+      <div href="" class="mail-options icons">
         <i class="fa fa-envelope" id="mail-Icon"></i>
         <div class="mail-option">
-          <p>Copy e-mail</p>
-          <p>Open e-mail in browser</p>
+          <a id="copy-email-button">Copy e-mail</a>
+          <a href="mailto:franjodumanovsky@gmail.com">Open e-mail in browser</a>
         </div>
-      </a>
     </div>
+    </div>
+
+    <p class="coppied-email-message">E-mail coppied to clipboard</p>
 
     <!-- introduction -->
     <section class="intro" id="home">
       <h1 class="section__title section__title--intro">
-        Fully responsive,<br />custom designed <strong>WEBSITES</strong>
+        Hey! I'm Francis,<br/>your new<strong>Frontend <br> Developer</strong>
       </h1>
 
       <p class="section__subtitle section__subtitle--intro">/Front-end.dev</p>
@@ -103,41 +115,35 @@
     <!-- my services -->
     <section class="my-services" id="services">
       <h2 class="section__title section__title--services">
-        Bring your projects to life
+        Skills
       </h2>
       <div class="services">
         <div class="service">
-          <h3>Design & Development</h3>
+          <h3>Web Development</h3>
           <p>
-            From UX/UI website design, all the way to developing beautifull
-            landing pages, and fully responsive websites. My goal is to impress
-            you & your customers with websites that engage and inspire.
+            My main focus is on making well designed & responsive websites using HTML, CSS and JavaScript. However, for my clients, 
+            I'm also doing UX/UI website design in Adobe XD.
           </p>
         </div>
         <div class="service">
-          <h3>E-Commerce & Seo optimization</h3>
+          <h3>SEO & Page speed</h3>
           <p>
-            Do you need an ecommerce site that will drive sales? Let me tell you
-            a little bit more about your ecommerce site built with unique and
-            attractive design that will grab the attention of your visitors.
+          For every website I create, I give a lot of attention to details regarding search engine optimisation for client desired keywords and optimise website speed as much as posible. 
           </p>
         </div>
         <div class="service">
-          <h3>Wordpress Development</h3>
+          <h3>Next to learn</h3>
           <p>
-            Wordpress website design and development, unique solutions and
-            custom code for customised development. You receive complete control
-            over your site with greate advantages like plugins, themes in user
-            friendly environment.
+            Currently working on improving my JavaScript skills, while also learning React JS . Everyday I'm becoming more and more engaged with tools such as Git and Terminal.
           </p>
         </div>
       </div>
 
-      <button href="#work" class="special-button">
+      <a href="#projects" class="special-button">
         See my Work
         <div class="special-button__horizontal"></div>
         <div class="special-button__vertical"></div>
-      </button>
+      </a>
     </section>
 
     <!-- About me -->
@@ -150,17 +156,10 @@
       <div class="about-me__body">
         <p>
           My name is Franjo Dumanovsky and lately I spend most of my days
-          writing semicolons; When I'm not infront of the screen, I usualy play
-          guitar, or walk dogs on the mountain peeks.
-        </p>
-        <p>
-          My experience with web development involves CSS, SaaS, HTML5,
-          Javascript, Jquery and Wordpress. I also use web design tools to
-          design the website with Adobe XD, and fluff up the images with
-          Photoshop.
+          writing semicolons; My greatest enthusiasm is for music (both old and new), and I play guitar.
         </p>
       </div>
-      <img src="img/dev.jpeg" alt="" class="about-me__img" />
+      <img src="img/w.jpeg" alt="" class="about-me__img" />
     </section>
 
   
@@ -173,21 +172,54 @@
         <div class="item">
           <div class="left">
             <div class="img">
-              <img src="img/aaa.jpeg" alt="project" />
+              <img src="img/mockup2.jpeg" alt="project" />
+            </div>
+          </div>
+          <div class="right">
+            <h3 class="project-title">Miltonia</h3>
+            <h4 class="project-sub-title">HTML CSS JavaScript</h4>
+            <p class="project-desc">
+              International manufacturer of color marketing tools.
+            </p>
+            <div class="project-buttons">
+              <a href="http://www.miltonia.com/" target="_blank" class="button button__primary">Visit Page</a>
+              <a href="https://github.com/Quelorel/Miltonia-Website" target="_blank" class="button button__outline external-link">
+                  <span>Code</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="left">
+            <div class="img">
+              <img src="img/mockup1.png" alt="project" />
             </div>
           </div>
           <div class="right">
             <h3 class="project-title">Reve Dostava</h3>
-            <h4 class="project-sub-title">Lorem ipsum dolor sit.</h4>
+            <h4 class="project-sub-title">HTML CSS JavaScript</h4>
             <p class="project-desc">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Sapiente, saepe animi? Quia harum repellat quis nesciunt voluptas
-              pariatur at aperiam!
+              Reve Dostava is the leading Croatian partner for the Wolt and Glovo platforms.
             </p>
             <div class="project-buttons">
-              <a href="" class="button button__primary">Know More</a>
-              <a href="" class="button button__outline external-link">
-                  <span>Preview</span>
+              <a href="https://reve-dostava.com/index.html" target="_blank" class="button button__primary">Visit Page</a>
+              <a href="https://github.com/Quelorel/Reve-dostava-Website" target="_blank" class="button button__outline external-link">
+                  <span>Code</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
@@ -207,61 +239,24 @@
           </div>
         </div>
 
-        <div class="item">
-          <div class="left">
-            <div class="img">
-              <img src="img/aaa.jpeg" alt="project" />
-            </div>
-          </div>
-          <div class="right">
-            <h3 class="project-title">Lorem ipsum dolor sit.</h3>
-            <h4 class="project-sub-title">Lorem ipsum dolor sit.</h4>
-            <p class="project-desc">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Sapiente, saepe animi? Quia harum repellat quis nesciunt voluptas
-              pariatur at aperiam!
-            </p>
-            <div class="project-buttons">
-              <a href="" class="button button__primary">Know More</a>
-              <a href="" class="button button__outline external-link">
-                  <span>Preview</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
+
 
         <div class="item">
           <div class="left">
             <div class="img">
-              <img src="img/aaa.jpeg" alt="project" />
+              <img src="img/mockup3.jpeg" alt="project" />
             </div>
           </div>
           <div class="right">
-            <h3 class="project-title">Lorem ipsum dolor sit.</h3>
-            <h4 class="project-sub-title">Lorem ipsum dolor sit.</h4>
+            <h3 class="project-title">HOTEL ZAGREB KARLOBAG</h3>
+            <h4 class="project-sub-title">HTML CSS JavaScript</h4>
             <p class="project-desc">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Sapiente, saepe animi? Quia harum repellat quis nesciunt voluptas
-              pariatur at aperiam!
+              Hotel Karlobag is a situated in the town of Karlobag, positioned on the seashore.
             </p>
             <div class="project-buttons">
-              <a href="" class="button button__primary">Know More</a>
-              <a href="" class="button button__outline external-link">
-                  <span>Preview</span>
+              <a href="https://quelorel.github.io/hotelZagrebKarlobag/" target="_blank" class="button button__primary">Visit Page</a>
+              <a href="https://github.com/Quelorel/hotelZagrebKarlobag" target="_blank" class="button button__outline external-link">
+                  <span>Code</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
@@ -283,35 +278,32 @@
     </section>
 
     <footer class="footer">
+      <div class="footer__navigation">
 
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a href="" class="social-list__link">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a href="" class="social-list__link">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a href="" class="social-list__link">
-            <i class="fab fa-facebook"></i>
-          </a>
-        </li>
-      </ul>
+        <div class="footer__navigation-items">
+          <h3>Navigation</h3>
+          <div class="footer__navigation-line"></div>
+          <a href="#header"><span data-content="Home" aria-hidden="true"></span>Home</a>
+          <a href="#services"><span data-content="Skills" aria-hidden="true"></span>Skills</a>
+          <a href="#about"><span data-content="About me" aria-hidden="true"></span>About me</a>
+          <a href="#projects"><span data-content="My work" aria-hidden="true"></span>My work</a>
+        </div>
+      </div>
+        <div class="footer__tag-line">
+          <h6>In search of frontend developer?</h6>
+        </div>
+       <a href="mailto:franjodumanovsky@gmail.com">
+        <div class="footer__cta-wrapper">
+          <h1><span data-content="LET'S TALK" aria-hidden="true"></span> LET'S TALK</h1>
+          <h1 class="h1-footer-arrow"><span data-content="→" aria-hidden="true"></span>→</h1>
+        </div>
+       </a> 
+
+
+
     </footer>
 
     <div class="bubbles">
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
       <div class="bubble"></div>
       <div class="bubble"></div>
       <div class="bubble"></div>
