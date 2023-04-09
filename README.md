@@ -1,6 +1,6 @@
 <h1>Portfolio website</h1>
 
-This is my first portfolio project I've made to showcase my projects up until that point. 
+My first portfolio project I've made to showcase my projects up until that point. 
 
 
 
