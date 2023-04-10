@@ -4,8 +4,8 @@ My first portfolio project I've made to showcase my projects up until that point
 
 
 
-<a href="https://quelorel.github.io/Portfolio/" target="_blank">Link to the project</a>
+<a href="https://FranjoDumanovsky.github.io/Portfolio/" target="_blank">Live Demo</a>
 
 
 
-<a href="https://quelorel.github.io/ReactPortfolio/" target="_blank">My new portfolio</a>
+<a href="https://FranjoDumanovsky.github.io/ReactPortfolio/" target="_blank">Current portfolio</a>
